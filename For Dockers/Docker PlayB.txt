@@ -1,0 +1,30 @@
+
+--------CURRENT USERS IN A DOCKER ----
+To see the currently running processes (users) within a Docker container
+ 
+>>>> docker exec -it <container_name_or_id> ps aux
+
+The command displays and list 
+(1) All running processes in a specific container
+(2) Displays info about the user running the above process
+
+For summary detail, not too much detail - 
+
+>>>>> docker exec -it <container_name_or_id> ps aux | awk '{print $1}'
+
+This prints out the list of users running processes in the container.
+
+
+
+---------- TO INSPECT AN IMAGE CREATION DATE --------
+
+>>>>>>  docker inspect --format='{{.Created}}' <image_name_or_id>
+
+
+----------  Searching for  Vulnerabilities in a Docker Container -----
+
+>>>>>>>> docker scan <image_name>
+
+Also you an open source
+> Anchore Engine
+> Clair
