@@ -25,6 +25,7 @@ This prints out the list of users running processes in the container.
 
 >>>>>>>> docker scan <image_name>
 
-Also you an open source
-> Anchore Engine
+Also an open source analysis tool to check vulnerabilities
+> Syft
+> grype
 > Clair
